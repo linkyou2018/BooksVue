@@ -1,0 +1,67 @@
+.scan-header span{
+	color: #95ae62;
+	font-weight: bold;
+}
+.scan-radius{
+	-moz-border-radius: .3rem;
+    -webkit-border-radius: .3rem;
+    -o-border-radius: .3rem;
+    border-radius: .3rem;
+}
+.scan-color{
+	color: #636363;
+}
+.cr-content{
+	padding: 1rem;
+	border-bottom: .444rem solid #fbfbf0;
+}
+.content-tab{
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	vertical-align: middle;
+}
+.content-tab-cell{
+	display: table-cell;
+	width: 50%;
+	text-align: center;
+	color: #636363;
+}
+.content-tab-cell img{
+	display: block;
+	width: 6.361rem;
+	margin: 0 auto;
+}
+.content-button{
+	width: 6.666rem;
+	height: 2.222rem;
+	line-height: 2.222rem;
+	color: #fff;
+	text-align: center;
+	margin: 1.361rem auto .722rem;
+}
+.content-button.button-left{
+	background-color: #95ae62;
+}
+.content-button.button-right{
+	background-color: #de845b;
+}
+.cr-tip-border{
+	color: #969696;
+	line-height: 1.333rem;
+	padding: .666rem .888rem;
+}
+.cr-tip-icon{
+	color: #7d7d7d;
+	padding: 1.666rem 0 .333rem;
+}
+.cr-tip-live{
+	line-height: 1.3rem;
+    margin: 2rem 1rem 1rem;
+}
+.cr-tip-live > div{
+	margin-bottom: .5rem;
+}
+.cr-tip-border span, .cr-tip-live span{
+	color: #de845b;
+}

@@ -1,0 +1,219 @@
+html, body{
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.user-header {
+	height: 2.472rem;
+	line-height: 2.472rem;
+	width: 100%;
+	text-align: center;
+}
+.user-setup{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 3.611rem;
+    height: 2.472rem;
+    line-height: 2.472rem;
+    text-align: center;
+    color: #95ae62;
+}
+.user-setup a, .user-info-login a{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.user-info{
+	position: relative;
+	width: 100%;
+	height: 9.333rem;
+	background-image: url(../../img/user/user-cover-01.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+}
+.user-info > div:last-child{
+	padding-top: 2.166rem;
+}
+.user-info-headimg, .user-table-badge{
+	-moz-border-radius: 10rem;
+	-webkit-border-radius: 10rem;
+	-o-border-radius: 10rem;
+	border-radius: 10rem;
+}
+.user-info-headimg{
+	display: block;
+	width: 4rem;
+	height: 4rem;
+	text-align: center;
+	overflow: hidden;
+	margin: 0 auto;
+	border: .14rem solid #c8cb7a;
+	background-color: #fff;
+}
+.user-info-headimg img{
+	max-width: 100%;
+	max-height: 100%;
+}
+.user-info-name, .user-info-int, .user-info-login{
+	text-align: center;
+}
+.user-info-name{
+	margin-top: .3rem;
+}
+.user-info-int, .user-info-login{
+	width: 5.111rem;
+	color: #fff;
+	margin: 0 auto;
+	-moz-border-radius: .166rem;
+	-webkit-border-radius: .166rem;
+	-o-border-radius: .166rem;
+	border-radius: .166rem;
+}
+.user-info-int{
+	height: .888rem;
+	line-height: .888rem;
+	margin-top: .216rem;
+	background-color: #dee0a1;
+}
+.user-info-login{
+	height: 1.333rem;
+	line-height: 1.333rem;
+	margin-top: .777rem;
+	background-color: #95ae62;
+}
+.user-content{
+	border-bottom: .444rem solid #f7f8e1;
+	background-color: #fff;
+}
+.user-table, .user-list > div{
+	padding: .666rem 0;
+}
+.user-table > div, .user-list > div{
+	display: table;
+	width: 100%;
+}
+.user-table > div{
+	table-layout: fixed;
+}
+.user-table-cell, .user-list-cell{
+	display: table-cell;
+	vertical-align: middle;
+}
+.user-table-cell{
+	text-align: center;
+}
+.user-table-cell-last{
+	width: 5.25rem;
+	border-left: 1px solid #e3e5bc;
+}
+.user-table-cell a{
+	width: 100%;
+	height: 100%;
+}
+.user-table-cell span{
+	display: block;
+}
+.user-table-icon{
+	position: relative;
+	width: 1.777rem;
+	height: 1.777rem;
+	background-image: url(../../img/user/user-icon-all-01.png);
+	background-repeat: no-repeat;
+	background-size: 9.444rem 2.277rem;
+	margin: 0 auto .5rem;
+}
+.user-table-icon-1{
+	background-position: 0 -.25rem;
+}
+.user-table-icon-2{
+	background-position: -1.916rem -.25rem;
+}
+.user-table-icon-3{
+	background-position: -3.833rem -.25rem;
+}
+.user-table-icon-4{
+	background-position: -5.75rem -.25rem;
+}
+.user-table-icon-5{
+	background-position: -7.666rem -.25rem;
+}
+.user-table-badge{
+	position: absolute;
+    min-width: .66rem;
+    height: .66rem;
+    line-height: .66rem;
+    top: 0;
+    right: -.16rem;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #e67d4e;
+}
+.user-table-badge, .user-list .user-list-tips span{
+	color: #e67d4e;
+}
+.user-list{
+	color: #7d7d7d;
+	padding: .444rem .888rem;
+}
+.user-list > div + div{
+	border-top: 1px solid #f1f2de;
+}
+.user-list i{
+	display: block;
+    width: .6rem;
+    height: .6rem;
+    border-color: #cad6b0;
+    margin: 0 auto;
+}
+.user-list-left{
+	width: 2.25rem;
+}
+.user-list-left div{
+	width: 1.416rem;
+	height: 1.277rem;
+	background-image: url(../../img/user/user-icon-all-03.png);
+	background-repeat: no-repeat;
+	background-size: 15.388rem 1.777rem;
+}
+.user-list-center span{
+	margin-left: 1rem;
+	color: #c9c9c9;
+}
+.user-list-tips{
+	text-align: right;
+}
+.user-list-right{
+	width: 2.4rem;
+}
+.user-list-1 div{
+	background-position: 0 -.25rem;
+}
+.user-list-2 div{
+	background-position: -1.555rem -.25rem;
+}
+.user-list-3 div{
+	background-position: -3.111rem -.25rem;
+}
+.user-list-4 div{
+	background-position: -4.666rem -.25rem;
+}
+.user-list-5 div{
+	background-position: -6.222rem -.25rem;
+}
+.user-list-6 div{
+	background-position: -7.777rem -.25rem;
+}
+.user-list-7 div{
+	background-position: -9.333rem -.25rem;
+}
+.user-list-8 div{
+	background-position: -10.888rem -.25rem;
+}
+.user-list-9 div{
+	background-position: -12.444rem -.25rem;
+}
+.user-list-10 div{
+	background-position: -13.999rem -.25rem;
+}

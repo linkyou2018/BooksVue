@@ -1,0 +1,319 @@
+.slide-fade-enter-active {
+	transition: all .3s ease;
+}
+.slide-fade-leave-active {
+	transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-active {
+	transform: translateX(50%);
+	opacity: 0;
+}
+.od-content{
+	margin-top: 3.36rem;
+}
+.od-content-list{
+	border-bottom: 1px solid #e3e5bc;
+	padding: .8rem 1rem;
+}
+.od-content-address, .od-content-count, .od-content-tips{
+	border-bottom: 1px solid #e3e5bc;
+	padding: .8rem 1rem;
+}
+.od-content-address{
+	color: #171717;
+}
+.od-content-address a > div, .od-content-list > div, .od-content-state, .od-info-content-list{
+	display: table;
+	width: 100%;
+}
+.od-content-icon, .od-content-left, .od-content-center, .od-content-right, .od-content-state > div, .od-info-content-list > div{
+	display: table-cell;
+	vertical-align: middle;
+}
+.od-content-icon{
+	width: 2.638rem;
+	background-image: url(../../img/icon-info-01.png);
+	background-position: left center;
+	background-repeat: no-repeat;
+	background-size: 1.222rem;
+}
+.od-content-left{
+	width: 1.833rem;
+}
+.od-content-left img{
+	width: 50%;
+	height: auto;
+	display: block;
+}
+.od-content-right{
+	width: 1.888rem;
+	text-align: right;
+}
+.od-content-right i, .od-content-state i{
+    display: inline-block;
+    border-color: #cad6b0;
+	width: .6rem;
+	height: .6rem;
+}
+.od-content-count span, .od-content-name, .od-foo-rule, .od-content-success-tips span, .od-content-id, #order_get .bd-booklist-check{
+	color: #e67d4e;
+}
+.od-content-tips, .od-content-nodata, .od-content-success{
+	border-bottom: .444rem solid #f7f8e1;
+}
+.od-content-tips-time, .od-content-vip{
+	color: #ff8779;
+}
+.od-content-list .od-content-left{
+	width: 4.972rem;
+}
+.od-content-list .od-content-left img{
+	width: 73.184%;
+}
+.od-content-name{
+	font-weight: bold;
+	margin-bottom: .15rem;
+}
+.od-content-pay{
+	color: #969696;
+	margin: 1rem 0 .2rem;
+}
+.od-content-vip{
+	float: right;
+}
+.od-foo-tips{
+	color: #878fa7;
+	padding: .7rem 1rem;
+}
+.od-foo-button{
+	width: 51.333%;
+	height: 2.666rem;
+	line-height: 2.666rem;
+	font-weight: bold;
+	color: #fff;
+	text-align: center;
+	margin: 1.5rem auto;
+	background-image: url(../../img/button-02.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+}
+.od-foo-rule{
+	text-align: center;
+	padding-top: .7rem;
+	padding-bottom: 2rem;
+}
+.od-content-nodata .od-content-pay{
+	color: #ff4e30;
+}
+.od-content-nodata-tips{
+	width: 100%;
+	text-align: center;
+	padding-bottom: .5rem;
+}
+.od-content-nodata-tips img{
+	display: block;
+	padding: 1.861rem 0;
+	width: 5.027rem;
+	margin: 0 auto;
+}
+.od-content-success{
+	padding: .8rem 1rem;
+}
+.od-content-success-tips{
+	text-align: center;
+	vertical-align: middle;
+	margin-bottom: .8rem;
+}
+.od-content-success-tips img{
+	width: 2.888rem;
+	vertical-align: middle;
+}
+.od-content-success-tips span{
+	font-size: 1.388rem;
+	vertical-align: middle;
+	margin-left: 1rem;
+}
+.od-foo-order{
+	padding: .7rem 1rem;
+	color: #636363;
+}
+.od-foo-order span{
+	color: #969696;
+}
+.od-content-id{
+	font-size: 1.166rem;
+	margin-bottom: .5rem;
+}
+.od-foo-offline{
+	text-align: center;
+	color: #878fa7;
+}
+.od-content-line, .od-content-return{
+	display: block;
+	width: 51.2%;
+	height: auto;
+	margin: 0 auto 1.25rem;
+}
+.od-content-state, .od-content-code{
+	color: #e67d4e;
+}
+.od-content-state div:last-child{
+	text-align: right;
+}
+#order_return .od-content{
+	margin-top: 5rem;
+}
+.od-content-return{
+    width: 63%;
+    margin-bottom: 2.555rem;
+}
+
+.bd-booklist-main{
+	padding: 0 .5rem;
+}
+.bd-booklist-li{
+	display: inline-block;
+    width: 33.333%;
+    text-align: center;
+    vertical-align: middle;
+    background: 0 0;
+    overflow: hidden;
+}
+.bd-booklist-li > div{
+	padding: 0 .5rem;
+}
+.bd-booklist-li-img{
+	display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+.bd-booklist-li-txt{
+	margin: .472rem 0;
+    width: 100%;
+}
+.bd-booklist-check{
+	height: 1.333rem;
+	line-height: 1.333rem;
+}
+.bd-booklist-check-icon{
+	width: 1.333rem;
+	height: 1.333rem;
+	margin: 0 auto;
+	background-image: url(../../img/icon-check-01-0.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+}
+.bd-booklist-check-icon-ed{
+	background-image: url(../../img/icon-check-01-1.png);
+}
+
+.od-info{
+	position: absolute;
+	max-width: 750px;
+	min-width: 320px;
+	height: 100%;
+	margin: 0 auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #fff;
+	overflow: hidden;
+}
+.od-info .od-content{
+	margin: 0;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.od-info .od-content > div:first-child{
+	margin-top: 3.36rem
+}
+.od-info-content{
+	padding: 1rem;
+}
+.od-info-content-title{
+	margin-bottom: .7rem;
+	font-weight: bold;
+}
+.od-info-content-list > div{
+	vertical-align: top;
+}
+.od-info-content-new{
+	color: #e67d4e;
+}
+.od-info-content-icon{
+	width: 1.6rem;
+	height: 2.916rem;
+	background-image: url(../../img/icon-005.png);
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-size: .555rem 2.916rem;
+}
+.od-info-content-iconfirst{
+	background-image: url(../../img/icon-006.png);
+	background-size: .555rem .861rem;
+}
+.od-info-content-date{
+	color: #969696;
+}
+.od-info-content-new .od-info-content-date{
+	color: #e67d4e;
+}
+.address-nocase{
+	color: #c9c9c9;
+}
+.od-foo-coupon, .od-foo-pay{
+	border-top: .444rem solid #f7f8e1;
+}
+.od-foo-coupon .od-content-left{
+	width: 2.666rem;
+}
+.od-foo-coupon .od-content-center{
+	color: #ff8779;
+	text-align: right;
+}
+.od-foo-coupon .od-content-right{
+	width: 1.555rem;
+}
+
+.od-foo-border{
+	position: relative;
+	border-top: 1px solid #f1f2de;
+}
+.od-foo-day{
+	position: absolute;
+	right: 1rem;
+	bottom: .7rem;
+}
+.od-foo-info{
+	display: table;
+	width: 100%;
+	color: #595959;
+}
+.od-foo-info-left, .od-foo-info-right{
+	display: table-cell;
+}
+.od-foo-info-right{
+	text-align: right;
+}
+.od-foo-pay .od-foo-info-right, .od-foo-pay-tips{
+	color: #e67d4e;
+}
+
+.od-foo-tips-table{
+	display: table;
+	width: 100%;
+}
+.od-foo-tips-table-left, .od-foo-tips-table-right{
+	display: table-cell;
+	vertical-align: middle;
+}
+.od-foo-tips-table-right{
+	width: 4rem;
+	color: #e67d4e;
+	text-align: right;
+}

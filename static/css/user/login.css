@@ -1,0 +1,60 @@
+.login-tips{
+	font-size: 1.222rem;
+	color: #95ae62;
+	text-align: center;
+	margin: 5.666rem 0 1rem;
+}
+.login-form{
+	margin: 0 1rem;
+}
+.login-form-li{
+	color: #171717;
+	padding: 1rem 0;
+	border-bottom: 1px solid #e3e5bc;
+}
+.login-input{
+	width: 7rem;
+	color: #b0b0b0;
+}
+#tel{
+	margin-left: 1.5rem;
+}
+#code{
+	margin-left: 2.45rem;
+}
+.login-code{
+	padding: .4rem;
+	color: #e67d4e;
+	border: 1px solid #e67d4e;
+	-moz-border-radius: .3rem;
+	-webkit-border-radius: .3rem;
+	-o-border-radius: .3rem;
+	border-radius: .3rem;
+}
+.login-code-active{
+	color: #b0b0b0;
+	border-color: #b0b0b0;
+}
+.bd-content-button{
+	width: 63.6%;
+	height: 2.666rem;
+	line-height: 2.666rem;
+	color: #fff;
+	text-align: center;
+	margin: 1rem auto;
+	background-image: url(../../img/button-01.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+}
+.login-bottom{
+	text-align: center;
+	color: #b0b0b0;
+}
+.login-bottom a{
+	color: #171717;
+}
+.login-error{
+	color: #e67d4e;
+	padding: .5rem 0;
+}

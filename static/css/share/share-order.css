@@ -1,0 +1,78 @@
+html, body{
+	min-height: 100%;
+	background-color: #feffdc;
+}
+.od-main{
+	padding: .888rem;
+}
+.od-content-list{
+	margin-bottom: .666rem;
+	border: 1px solid #e3e5bc;
+	-moz-border-radius: .3rem;
+	-webkit-border-radius: .3rem;
+	-o-border-radius: .3rem;
+	border-radius: .3rem;
+	background-color: #fff;
+}
+.od-code, .od-count{
+	padding: .666rem .888rem;
+}
+.od-code, .od-list{
+	color: #7d7d7d;
+	border-bottom: 1px solid #c8cb7a;
+}
+.od-list{
+	padding: 0 .888rem;
+}
+.od-count{
+	color: #969696;
+}
+.od-code > div, .od-list > div{
+	display: table;
+	width: 100%;
+}
+.od-list > div{
+	padding: .666rem 0;
+}
+.od-list > div + div{
+	border-top: 1px solid #e3e5bc;
+}
+.od-code-left, .od-code-center, .od-list-left, .od-list-center{
+	display: table-cell;
+	vertical-align: middle;
+}
+.od-code-center{
+	color: #a6a6a6;
+	text-align: right;
+}
+.od-list-left, .od-list-center{
+	vertical-align: top;
+}
+.od-list-left{
+	width: 3.777rem;
+}
+.od-list-left img{
+	display: block;
+	width: 2.666rem;
+	height: auto;
+}
+.list-casecode, .od-list-name{
+	color: #e67d4e;
+}
+.od-list-name{
+	font-weight: bold;
+	margin-bottom: .3rem;
+}
+.od-foo-button{
+	width: 51.333%;
+	height: 2.666rem;
+	line-height: 2.666rem;
+	font-weight: bold;
+	color: #fff;
+	text-align: center;
+	margin: 1.5rem auto;
+	background-image: url(../../img/button-02.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+}

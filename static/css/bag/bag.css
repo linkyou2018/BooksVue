@@ -1,0 +1,142 @@
+.list-nodata{
+	padding: 2rem 1rem;
+	text-align: center;
+}
+.list-slider-cover{
+	padding: 1.111rem;
+}
+.list-table, .bag-footer-table{
+    display: box;
+    display: -webkit-box;
+	width: 100%;
+}
+.list-cell, .bag-footer-cell{
+	vertical-align: middle;
+}
+.list-left{
+	width: 10%;
+	background-image: url(../../img/icon-check-04-0.png);
+	background-position: center left;
+	background-repeat: no-repeat;
+	background-size: 1.222rem 1.166rem;
+}
+.list-left-check{
+	background-image: url(../../img/icon-check-04-1.png);
+}
+.list-left-no{
+	background-image: url(../../img/icon-check-01-0.png);
+	background-size: 1.222rem 1.222rem;
+}
+.list-center{
+	width: 33%;
+	background-image: url(../../img/share/nobook-icon-01.png);
+	background-position: center left;
+	background-repeat: no-repeat;
+	background-size: 80% auto;
+}
+.list-right{
+	width: 57%;
+}
+.list-name{
+	color: #e67d4e;
+	font-weight: bold;
+}
+.list-author{
+	color: #969696;
+	margin: .15rem 0 .5rem 0;
+}
+.list-intro{
+	color: #595959;
+    height: 2rem;
+	line-height: 1rem;
+}
+.list-state{
+	color: #c8cb7a;
+    display: -webkit-box;
+    display: box;
+    overflow: hidden;
+    -webkit-box-align: center;
+    box-align: center;
+    margin-top: .3rem;
+}
+.list-state span{
+	display: block;
+}
+.cur-li-s{
+	color: #fff;
+    padding: 0 .305rem;
+    margin-right: .666rem;
+    position: relative;
+    background-color: #95ae62;
+    -moz-border-radius: .166rem;
+    -webkit-border-radius: .166rem;
+    -o-border-radius: .166rem;
+    border-radius: .166rem;
+}
+.bag-footer{
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: 98;
+	max-width: 750px;
+	min-width: 320px;
+	margin: 0 auto;
+    background-color: #fff;
+    min-height: 3.861rem;
+	bottom: 0;
+	border-top: 1px solid #e67d4e;
+}
+.bag-footer > div{
+	padding: 0 1.111rem;
+    max-height: 13rem;
+    overflow-y: auto;
+}
+.bag-footer-count{
+	color: #a6a6a6;
+	padding: .444rem 0;
+}
+.bag-footer-list{
+	width: 48%;
+	color: #7d7d7d;
+	padding-bottom: .666rem;
+}
+.bag-footer-left{
+	width: 25%;
+	background-image: url(../../img/icon-check-04-2.png);
+	background-position: center left;
+	background-repeat: no-repeat;
+	background-size: 1.222rem 1.166rem;
+}
+.bag-footer-center{
+	width: 75%;
+}
+.bag-footer-arrow{
+	position: absolute;
+	left: 50%;
+	margin-left: -.277rem;
+	border-width: .555rem;
+}
+.bag-footer-down{
+	top: 0;
+	border-top-color: #e67d4e;
+}
+.bag-footer-up{
+	top: -1.11rem;
+	border-bottom-color: #e67d4e;
+}
+.bag-footer-button{
+	position: fixed;
+	right: 1.111rem;
+	bottom: .8333rem;
+	width: 8.944rem;
+	height: 2.666rem;
+	line-height: 2.666rem;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	z-index: 98;
+	background-image: url(../../img/button-08.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+}

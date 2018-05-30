@@ -1,0 +1,87 @@
+html, body{
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+#sort_app{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.sort-header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9;
+}
+.sort-left, .sort-right{
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.sort-left{
+	float: left;
+	width: 26.666%;
+	background-color: #feffdc;
+}
+.sort-right{
+	float: right;
+	width: 62%;
+}
+.sort-table, .sort-first{
+	color: #4a4a4a;
+	padding: 1.045rem 0;
+	text-align: center;
+	border-bottom: 1px solid #e4e5bd;
+}
+.sort-table-active, .sort-second-name{
+	color: #95ae62;
+}
+.sort-table-active{
+	font-weight: bold;
+}
+.sort-first{
+	color: #969696;
+	padding: .875rem 0;
+	background-color: #fdfdf7;
+}
+.sort-first-active{
+	position: relative;
+	color: #e67d4e;
+	background-color: #fff;
+}
+.sort-first-active > div{
+	position: absolute;
+	top: .875rem;
+	left: 0;
+	width: .222rem;
+	height: 1.111rem;
+	background-color: #c8cb7a;
+}
+.sort-second{
+	padding: 1rem 0;
+	border-bottom: 1px solid #f8f8ee;
+}
+.sort-third{
+	display: inline-block;
+	width: 5.444rem;
+	text-align: center;
+	margin-top: .555rem;
+	margin-right: .888rem;
+}
+.sort-third img{
+	display: inline-block;
+	width: auto;
+	max-width: 100%;
+	height: 3.111rem;
+	vertical-align: middle;
+	border: 0 none;
+	-moz-border-radius: .166rem;
+    -webkit-border-radius: .166rem;
+    -o-border-radius: .166rem;
+    border-radius: .166rem;
+}
+.sort-third div{
+	color: #a6a6a6;
+	padding: .444rem 0;
+}
