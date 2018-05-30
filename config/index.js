@@ -3,6 +3,7 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 
 const path = require('path')
+var proxyConfig = require('./proxyConfig')
 
 module.exports = {
   dev: {
@@ -18,6 +19,8 @@ module.exports = {
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,
+    proxyTable: proxyConfig.proxyList,
+
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
 
     // Use Eslint Loader?
