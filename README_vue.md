@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # books
 
 > A Vue.js project
@@ -28,3 +29,6 @@ npm test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+=======
+# BooksVue
+>>>>>>> 4c1b68fd4bd76bfab33b7ff47427fad310820e23
