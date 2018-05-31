@@ -19,7 +19,7 @@ module.exports = {
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,
-    proxyTable: proxyConfig.proxyList,
+    // proxyTable: proxyConfig.proxyList,
 
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
 

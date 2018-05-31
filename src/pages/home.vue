@@ -3,7 +3,7 @@
 		<div class="home-header">
 			<div id="sliderMain">
 				<swipe class="my-swipe">
-					<swipe-item v-for="(item,index) in sliderData" class="slider-list">
+					<swipe-item v-for="(item,key,index) in sliderData" :key="item.title" class="slider-list">
 						<img :src="item.picUrl">
 					</swipe-item>
 				</swipe>
