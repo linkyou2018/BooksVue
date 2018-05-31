@@ -58,9 +58,9 @@
 		</div>
 	</div>
 </template>
-<script src="../../static/js/home/home.js"></script>
-<style src="../../static/css/home/home.css" ></style>
-<style>
+<script src="../../../static/js/home/home.js"></script>
+<style scoped>
+@import '../../../static/css/home/home.css';
 @import 'vue-swipe/dist/vue-swipe.css';
 .mint-swipe-indicators {
 	display: none;

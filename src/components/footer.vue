@@ -32,14 +32,14 @@ export default {
 					className: 'footer-bag',
 					btnName: 'footer-name-bag',
 					name: '书包',
-					url: 'page/bag/bag.html',
+					url: '/bag',
 					iframe: 'bag'
 				},
 				{
 					className: 'footer-sort',
 					btnName: 'footer-name-sort',
 					name: '书单',
-					url: 'page/sort/sort.html',
+					url: '/bookList',
 					iframe: 'sort'
 				},
 				{

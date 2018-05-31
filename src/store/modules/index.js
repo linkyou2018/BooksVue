@@ -7,7 +7,7 @@ const getters={
     
 }
 
-const actions ={
+const actions={
 
 
 }

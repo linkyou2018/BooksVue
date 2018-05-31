@@ -6,11 +6,13 @@ import router from './router'
 import api from './api/index.js'
 import axios from 'axios'
 import store from './store'
+import vuescroll from 'vue-scroll'
 import { Swipe, SwipeItem } from 'vue-swipe'
 
 
 Vue.component('swipe', Swipe)
 Vue.component('swipe-item', SwipeItem)
+Vue.use(vuescroll)
 Vue.prototype.$api = api
 Vue.config.productionTip = false
 

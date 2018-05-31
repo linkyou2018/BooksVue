@@ -22,15 +22,11 @@ export default {
 			},
 			{
 				icon: 'user-table-icon-2',
-				name: '待取书'
+				name: '传递中'
 			},
 			{
 				icon: 'user-table-icon-3',
-				name: '待还书'
-			},
-			{
-				icon: 'user-table-icon-4',
-				name: '客服'
+				name: '已完成'
 			},
 			{
 				icon: 'user-table-icon-5',
@@ -77,14 +73,16 @@ export default {
 						icon: 'user-list-3',
 						name: '图书共享',
 						intro: '可获赠阅读币',
-						tips: '已共享<span>0</span>本'
+						tips: '已共享<span>0</span>本',
+						url:'share'
 					},
 					{
 						id: 'yuyue',
 						icon: 'user-list-4',
-						name: '借书预约排队',
+						name: '爱书公益',
 						intro: '',
-						tips: ''
+						tips: '',
+						url:'commonweal'
 					}
 				]
 			},
@@ -95,14 +93,16 @@ export default {
 						icon: 'user-list-5',
 						name: '我的书评',
 						intro: '',
-						tips: ''
+						tips: '',
+						url:'/user/usercomment'
 					},
 					{
 						id: 'guizi',
 						icon: 'user-list-6',
 						name: '常用柜子',
 						intro: '',
-						tips: ''
+						tips: '',
+						url:''
 					}
 				]
 			},
@@ -113,27 +113,34 @@ export default {
 						icon: 'user-list-7',
 						name: '我的足迹',
 						intro: '',
-						tips: ''
+						tips: '',
+						url:''
 					},
 					{
 						id: 'zhiyin',
 						icon: 'user-list-8',
 						name: '使用指引',
 						intro: '',
-						tips: ''
+						tips: '',
+						url:''
 					},
 					{
 						id: 'fankui',
 						icon: 'user-list-9',
 						name: '问题反馈',
 						intro: '',
-						tips: ''
+						tips: '',
+						url:''
 					}
 				]
 			}
 		]
         }
-    },
+	},
+	methods:{
+		
+
+	},
     created(){
 		this.$store.commit({
 			type:"setIsFoot",
