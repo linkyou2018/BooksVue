@@ -1,7 +1,12 @@
+
+
 // 配置API接口地址
-var root = 'http://www.1mks.com'
+var root = 'http://api.books.com'
 // 引用axios
 var axios = require('axios')
+
+var asscessToken=localStorage.getItem("token");
+
 // 自定义判断元素类型JS
 function toType (obj) {
   return ({}).toString.call(obj).match(/\s([a-zA-Z]+)/)[1].toLowerCase()
@@ -33,6 +38,7 @@ function filterNull (o) {
 */
 
 function apiAxios (method, url, params, success, failure) {
+  //console.log(asscessToken)
   if (params) {
     params = filterNull(params)
   }
@@ -41,6 +47,7 @@ function apiAxios (method, url, params, success, failure) {
     url: url,
     data: method === 'POST' || method === 'PUT' ? params : null,
     params: method === 'GET' || method === 'DELETE' ? params : null,
+    headers: {'Authorization': 'Bearer '+asscessToken},
     baseURL: root,
     withCredentials: false
   })

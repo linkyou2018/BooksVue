@@ -1,3 +1,5 @@
+import { mapGetters } from 'vuex'
+
 export default {
 	name: "home",
 	data() {
@@ -60,20 +62,40 @@ export default {
 		}
 
 	},
+	computed:{
+		...mapGetters(['currentUser'])
+	},
 	created() {
+		console.log(this.currentUser);
+		
 		this.$store.commit({
 			type: "setIsFoot",
 			value: true
 		})
 
-		this.$api.get('omqs/Index?method=indexBookList', null, r => {
-			this.contentData = r.bookListArray;
-			console.log(this.contentData)
-		}, f => {
-			console.log(f)
+		// this.$api.get('omqs/Index?method=indexBookList', null, r => {
+		// 	this.contentData = r.bookListArray;
+		// 	console.log(this.contentData)
+		// }, f => {
+		// 	console.log(f)
+		// })
+
+		this.$store.dispatch({
+			type: 'login',
+			openId:'123',
+		}).then(res => {
+			console.log("token success")
+		  }, err => {
+				console.log("token Error")
 		})
 
+		this.$store.dispatch({
+			type:'getMember',
+		}).then(res=>{
+			console.log(res)
+		},err=>{
 
+		})
 
 	}
 };
