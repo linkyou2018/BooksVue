@@ -1,4 +1,4 @@
-import { mapGetters } from 'vuex'
+import { mapGetters,mapState } from 'vuex'
 
 export default {
 	name: "home",
@@ -33,7 +33,13 @@ export default {
 					url: "../scancode/caseresult.html",
 					img: "/static/img//home/home-btn-icon-04.png",
 					txt: "共享书"
+				},
+				{
+					url: '/commonweal',
+					img: '/static/img/home/home-btn-icon-gy.png',
+					txt: '爱书公益'
 				}
+
 			],
 			contentIcon: [
 				{
@@ -63,14 +69,20 @@ export default {
 
 	},
 	computed:{
-		...mapGetters(['currentUser'])
+		...mapGetters(['currentUser']),
+		...mapState({
+			catalogBookList:state=>state.home.catalogBookList
+		})
 	},
 	created() {
-		console.log(this.currentUser);
-		
+		var that=this;
 		this.$store.commit({
 			type: "setIsFoot",
 			value: true
+		})
+
+		this.$store.dispatch({
+			type:'GetBookIndex'
 		})
 
 		// this.$api.get('omqs/Index?method=indexBookList', null, r => {
@@ -80,22 +92,15 @@ export default {
 		// 	console.log(f)
 		// })
 
-		this.$store.dispatch({
-			type: 'login',
-			openId:'123',
-		}).then(res => {
-			console.log("token success")
-		  }, err => {
-				console.log("token Error")
-		})
+		// this.$store.dispatch({
+		// 	type: 'login',
+		// 	openId:'123',
+		// })
 
-		this.$store.dispatch({
-			type:'getMember',
-		}).then(res=>{
-			console.log(res)
-		},err=>{
+		// this.$store.dispatch({
+		// 	type:'getMember',
+		// })
 
-		})
 
 	}
 };

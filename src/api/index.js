@@ -2,10 +2,11 @@
 
 // 配置API接口地址
 var root = 'http://api.books.com'
+//var root = 'http://apib.zhuniangjia.com'
 // 引用axios
 var axios = require('axios')
 
-var asscessToken=localStorage.getItem("token");
+
 
 // 自定义判断元素类型JS
 function toType (obj) {
@@ -38,7 +39,8 @@ function filterNull (o) {
 */
 
 function apiAxios (method, url, params, success, failure) {
-  //console.log(asscessToken)
+  var asscessToken=localStorage.getItem("token");
+  console.log(asscessToken)
   if (params) {
     params = filterNull(params)
   }
@@ -55,6 +57,7 @@ function apiAxios (method, url, params, success, failure) {
     
       if (res.status === 200) {
         if (success) {
+          console.log(res.data)
           success(res.data)
         }
       } else {

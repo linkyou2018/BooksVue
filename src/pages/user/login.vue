@@ -33,6 +33,24 @@
 export default {
     name:'login',
     created(){
+
+       //sessionStorage.setItem("code","")
+      var code= this.$route.query.code;
+      if(code==undefined)
+      {
+        var url = encodeURIComponent(window.location.href);
+        var appid="wx6d20bd01d7c0c730";
+        window.location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=' + appid +
+        '&redirect_uri=' + url + '&response_type=code&scope=snsapi_base&state=#wechat_redirect';
+      }
+      else{
+        this.$store.dispatch({
+          type: 'getOpenId',
+          code:code
+        })
+        
+      }
+      console.log(code);
         // this.$store.commit({
 		// 	type:"setIsFoot",
 		// 	value:false

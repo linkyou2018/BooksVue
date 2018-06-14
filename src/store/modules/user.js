@@ -1,101 +1,92 @@
 import api from '../../api/index.js'
 
 const state = {
+  accessToken:{
+    token:"",
+    OpenId:"",
+    expires:""
+  },
   isLogin: false,
-  login_token: '',
-  login_name: '',
-  login_token: '',
-  login_memberId: ''
+  member:{}
 }
 
 const getters = {
   currentUser: state => {
     return {
-      token: state.login_token,
+      token:state.accessToken.token,
       name: state.login_name,
-      token: state.login_token,
-      memberId: state.login_memberId
+      openId:state.accessToken.openId,
+      expires:state.accessToken.expires,
+      member:state.member,
+      isLogin:state.isLogin
+
     }
   }
 }
 
 const actions = {
-  login({
+  getOpenId({
     commit
   }, payload) {
     return new Promise((resolve, reject) => {
-      var asscessToken=localStorage.getItem("token");
-      if(asscessToken!=null)
-      {
-        resolve(asscessToken)
-      }
-      else{
-        api.get('GetPasswordToken', {
-          grant_type: "password",
-          appid: "Books",
-          secret: "9FA4819C-00AE-4ABC-9569-8A985E7CC549",
-          openId: payload.openId
-        }, res => {
-          var json=JSON.parse(res);
-          localStorage.setItem('token', json.access_token)
-          commit({
-            type: "setUser",
-            token: json.token
-          })
-          resolve(json)
-        }, err => {
-          reject(f)
+      api.get('Shared/GetJssdkConfig',{
+        code:payload.code
+      },res=>{
+        commit({
+          type: "setAccessToken",
+          res:res,
         })
-      }
-
-    })
+        resolve(res)
+      },err=>{
+        reject(f)
+      })
+    })  
   },
   getMember({
     commit
   }, payload) {
     return new Promise((resolve, reject) => {
-      api.get("Member/GetMember"
-      ,null
-      ,res=>{
+      api.get("Member/GetMember", null, res => {
         commit({
-          type:"setUser",
-          name:res.NickName,
-          memberId:res.MemberId
+          type: "setUser",
+          res:res
         })
         resolve(res)
-      },err=>{
+      }, err => {
         reject(err)
       })
     })
   }
+
 }
 
 const mutations = {
-  updateData(state, payload) {
-    switch (payload.name) {
-      case 'token':
-        state.temp_token = payload.value
-        break
-      case 'name':
-        state.temp_name = payload.name
-        break
-      default:
-        console.log('Error:Dont directly mutate Vuex store')
-    }
-  },
   getLocalUser(state) {
     state.login_token = localStorage.getItem('token')
     state.login_name = localStorage.getItem('name')
   },
+  setAccessToken(state,payload){
+    localStorage.setItem("token",payload.res.access_token)
+    localStorage.setItem("expires",payload.res.expires)
+    sessionStorage.setItem("OpenId",payload.res.OpenId);
+    state.accessToken.OpenId=payload.res.OpenId;
+    state.accessToken.token=payload.res.access_token;
+    state.accessToken.expires=payload.res.expires;
+
+  },
   setUser(state, payload) {
-    console.log(payload)
-    state.login_name = payload.name
-    state.login_memberId = payload.memberId,
-    state.login_token = payload.token;
+    // state.login_name = payload.res.NickName
+    // state.accessToken.OpenId=payload.res.OpenId;
+    // state.integral=payload.res.Integral==null?0:payload.res.Integral;
+    // state.headimg=payload.res.PhotoPath;
+    state.member=payload.res;
+    state.isLogin=true;
+
   },
   logout(state) {
     localStorage.removeItem('token')
     localStorage.removeItem('name')
+    sessionStorage.removeItem("OpenId")
     state.login_token = ''
     state.login_name = ''
   }

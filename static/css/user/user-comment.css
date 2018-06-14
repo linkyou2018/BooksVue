@@ -139,7 +139,6 @@
   padding: .9rem 0;
 }
 .addComment{
-    width: 5.111rem;
     color: #fff;
     margin: 0 auto;
     border-radius: .166rem;
@@ -150,6 +149,7 @@
     text-align: center;
     float: right;
 }
+.addComment a{display: block;padding: 0 1rem;}
 .bl-sort-intro-text-hide {
     -o-text-overflow: ellipsis;
        text-overflow: ellipsis;

@@ -1,3 +1,6 @@
+import { mapGetters, mapState } from 'vuex'
+import command from '../../../src/api/command'
+import wx from 'weixin-js-sdk'
 
 export default {
     name:"user",
@@ -72,7 +75,7 @@ export default {
 						id: 'gongxiang',
 						icon: 'user-list-3',
 						name: '图书共享',
-						intro: '可获赠阅读币',
+						intro: '',
 						tips: '已共享<span>0</span>本',
 						url:'share'
 					},
@@ -122,7 +125,7 @@ export default {
 						name: '使用指引',
 						intro: '',
 						tips: '',
-						url:''
+						url:'/user/guide'
 					},
 					{
 						id: 'fankui',
@@ -138,16 +141,47 @@ export default {
         }
 	},
 	methods:{
-		
-
+		toManage(){
+			console.log(this.currentUser)
+			this.$router.push({path:'/user/manage'})
+		}
+	},
+	computed:{
+		...mapGetters(['currentUser']),
+		...mapState({
+			
+		})
 	},
     created(){
+		var code=this.$route.query.code;
+		var that=this;
+		command.weixinAuthorize(code,that)
+
+		
+		this.$store.dispatch({
+			type:"getJssdkConfig",
+			url:document.URL
+		}).then(res=>{
+			
+			wx.config({
+				debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+				appId: 'wx6d20bd01d7c0c730', // 必填，公众号的唯一标识
+				timestamp:res.Timestamp	, // 必填，生成签名的时间戳
+				nonceStr:res.NonceStr, // 必填，生成签名的随机串
+				signature:res.Signature,// 必填，签名
+				jsApiList: ["scanQRCode"] // 必填，需要使用的JS接口列表
+			});
+
+
+			
+		})
+
 		this.$store.commit({
 			type:"setIsFoot",
 			value:true
 		})
-    },
-    updated(){
-   
+
+
+	
     }
 }

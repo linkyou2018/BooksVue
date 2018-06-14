@@ -6,14 +6,18 @@
 			</div>
 			 头部end -->
 		<div class="user-info">
-			<router-link class="user-setup font-size-30" :to="{path:'/user/manage'}">设置</router-link>
+			<!-- <div v-if="currentUser.isLogin">
+				<router-link class="user-setup font-size-30" :to="{path:'/user/manage'}">设置</router-link>
+			</div> -->
 			<div>
-				<div class="user-info-headimg" @click="toManage()"><img :src="headimg" /></div>
+				<div class="user-info-headimg" >
+					<img style="height:4rem"  :src="currentUser.member.PhotoPath" />
+				</div>
 				<div>
-					<div v-if="isLogin">
-						<div class="user-info-name" @click="toManage()">{{nickName}}</div>
-						<div class="user-info-int font-size-22" @click="toManage()">
-							<div>当前积分{{integral}}</div>
+					<div v-if="currentUser.isLogin">
+						<div class="user-info-name" >{{currentUser.member.NickName}}</div>
+						<div class="user-info-int font-size-22" >
+							<div>当前积分{{currentUser.member.Integral==null?0:currentUser.member.Integral}}</div>
 						</div>
 					</div>
 					<div class="user-info-login font-size-26" v-else>
@@ -49,7 +53,7 @@
 					<div class="user-list-cell user-list-center font-size-30">{{i.name}}
 						<span class="font-size-28" v-html="i.intro" v-if="i.intro != ''"></span>
 					</div>
-					<div class="user-list-cell user-list-tips" v-html="i.tips"></div>
+					<div style="float:right"  class="user-list-cell user-list-tips" v-html="i.tips"></div>
 				</router-link>
 
 				<!--<div class="user-list-cell user-list-right"><i class="arrow arrow-right"></i></div>-->

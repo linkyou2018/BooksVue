@@ -13,6 +13,7 @@ import BookView from '../pages/book'
 import UserLoginView from '../pages/user/Login'
 import UserManageView from '../pages/user/manage'
 import UserCommentView from '../pages/user/usercomment'
+import UserGuideView from '../pages/user/guide' 
 
 import OrderView from '../pages/order'
 import SharIndexView from '../pages/share/index'
@@ -62,6 +63,10 @@ export default new Router({
     {
       path:'/user/usercomment',
       component:UserCommentView
+    },
+    {
+      path:'/user/guide',
+      component:UserGuideView
     },
     {
       path:'/order',

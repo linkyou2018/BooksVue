@@ -1,11 +1,12 @@
 <template>
     <div class="manage">
-        <header-back title="我的信息管理" ></header-back>
+        <header-back title="我的信息管理"></header-back>
         <div style="height: 2.472rem;"></div>
         <div class="login-form">
             <div class="login-form-li font-size-32">
                 <div class="list-left">昵称</div>
-                <div class="list-center"><input id="nickname" type="text" class="login-input font-size-32" :class="{'input-active': inputNickname != ''}" maxlength="15" placeholder="请输入" v-model="inputNickname" /></div>
+                <div class="list-center">
+                    <input id="nickname" type="text" class="login-input font-size-32" :class="{'input-active': inputNickname != ''}" maxlength="15" placeholder="请输入" v-model="inputNickname" /></div>
             </div>
             <div class="login-form-li font-size-32">
                 <div class="list-left">性别</div>
@@ -44,9 +45,10 @@
     </div>
 </template>
 <style scoped>
-@import "../../../static/css/user/user-manage.css";
+@import '../../../static/css/user/user-manage.css';
 </style>
 <script>
+import { mapGetters, mapState } from 'vuex'
 import HeaderBack from '../../components/headerBack'
 export default {
   name: 'manage',
@@ -79,7 +81,20 @@ export default {
       reqState: 1
     }
   },
-  created() {}
+  computed: {
+    ...mapGetters(['currentUser']),
+    ...mapState({})
+  },
+  methods: {
+    selectSex: function(i) {
+      this.sex = i
+    }
+  },
+  created() {
+      this.inputNickname=this.currentUser.name;
+      //this.sex=this.currentUser.
+
+  }
 }
 </script>
 
